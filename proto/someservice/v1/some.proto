@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package proto.someservice.v1;
+
+import "proto/some/v1/some.proto";
+
+service SomeService {
+  rpc DoSomething(DoSomethingRequest) returns (DoSomethingResponse);
+}
+
+message DoSomethingRequest {
+  proto.some.v1.Some some = 1;
+}
+
+message DoSomethingResponse {
+
+}
